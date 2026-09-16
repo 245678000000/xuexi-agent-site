@@ -1,1 +1,156 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>阅读打卡 · Agent 学习站</title><link rel="stylesheet" href="../assets/style.css"></head><body><main><h1>阅读打卡</h1><p>勾选驱动的阅读进度。</p><p><a href="../index.html">返回首页</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阅读打卡 · Agent 学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="overlay" id="overlay" onclick="toggleNav()"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="../index.html">Agent 学习站</a>
+    <span class="sub">Obsidian 笔记静态站</span>
+  </div>
+  <div class="nav-section"><div class="nav-section-title">入口</div>
+<a class="" href="../欢迎.html">欢迎</a>
+<a class="" href="学习驾驶舱.html">学习驾驶舱</a>
+<a class="" href="Agent学习地图.html">Agent学习地图</a>
+<a class="active" href="阅读打卡.html">阅读打卡</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">01 概念</div>
+<a class="indent " href="../01-概念/Agent和聊天机器人有什么不同.html">Agent和聊天机器人有什么不同</a>
+<a class="indent " href="../01-概念/一次Agent任务长什么样.html">一次Agent任务长什么样</a>
+<a class="indent " href="../01-概念/什么是Agent.html">什么是Agent</a>
+<a class="indent " href="../01-概念/常见坑和误区.html">常见坑和误区</a>
+<a class="indent " href="../01-概念/核心概念速查.html">核心概念速查</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">02 实践</div>
+<a class="indent " href="../02-实践/如何开始学习.html">如何开始学习</a>
+<a class="indent " href="../02-实践/最小练习清单.html">最小练习清单</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">03 资源</div>
+<a class="" href="../03-资源/延伸阅读.html">延伸阅读</a>
+<a class="" href="../03-资源/官网-Agent介绍/索引.html">官网索引</a>
+<a class="" href="../03-资源/官网-Agent介绍/收集进度.html">收集进度</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">OpenAI</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/01-Agents总览.html">01-Agents总览</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/02-工具与函数调用-MCP.html">02-工具与函数调用-MCP</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/03-Skills.html">03-Skills</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/04-Agents-SDK-运行-Handoffs-Guardrails.html">04-Agents-SDK-运行-Handoffs-Guardrails</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/05-Agents-API-架构简述.html">05-Agents-API-架构简述</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/06-Programmatic-Tool-Calling.html">06-Programmatic-Tool-Calling</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/07-Tool-Search.html">07-Tool-Search</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/08-Agents-API-Environments与Security.html">08-Agents-API-Environments与Security</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/99-延伸链接.html">99-延伸链接</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Anthropic</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/01-工具调用与Agent循环.html">01-工具调用与Agent循环</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/02-Managed-Agents.html">02-Managed-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/04-Computer-Use.html">04-Computer-Use</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/05-Agent-Skills.html">05-Agent-Skills</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/06-MCP连接器.html">06-MCP连接器</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/07-Server工具与Client工具.html">07-Server工具与Client工具</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/08-Browser-Use.html">08-Browser-Use</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/09-Managed-Agents工具与权限.html">09-Managed-Agents工具与权限</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/10-Memory-Tool.html">10-Memory-Tool</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Google Gemini</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/01-Managed-Agents总览.html">01-Managed-Agents总览</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/02-Quickstart要点.html">02-Quickstart要点</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/04-Managed与Custom-Agents.html">04-Managed与Custom-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/05-Antigravity能力与工具.html">05-Antigravity能力与工具</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/06-Interactions-API概述.html">06-Interactions-API概述</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/07-Deep-Research-Agent.html">07-Deep-Research-Agent</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/08-Building-Managed-Agents.html">08-Building-Managed-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/09-Environments.html">09-Environments</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/10-Hooks.html">10-Hooks</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/11-Computer-Use.html">11-Computer-Use</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">跨厂商</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/跨厂商/01-Agent-Skills对照.html">01-Agent-Skills对照</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/跨厂商/02-MCP对照.html">02-MCP对照</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">日记</div>
+<a class="indent " href="../日记/2026-09-16-开库.html">2026-09-16-开库</a>
+<a class="indent " href="../日记/2026-09-16-驾驶舱上线.html">2026-09-16-驾驶舱上线</a>
+</div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-btn" type="button" onclick="toggleNav()">菜单</button>
+    <strong>Agent 学习站</strong>
+  </div>
+  <div class="content-wrap">
+    <div class="breadcrumb"><a href="../index.html">首页</a> <span>/</span> <a href="../00-地图.html">00-地图</a> <span>/</span> 阅读打卡</div>
+    <h1>阅读打卡</h1>
+
+<blockquote>
+<p>读完一篇就改成 <code>[x]</code>。驾驶舱会统计这里。</p>
+</blockquote>
+<h2>概念</h2>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../01-概念/Agent和聊天机器人有什么不同.html" class="wikilink">Agent和聊天机器人有什么不同</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../01-概念/一次Agent任务长什么样.html" class="wikilink">一次Agent任务长什么样</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../01-概念/什么是Agent.html" class="wikilink">什么是Agent</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../01-概念/常见坑和误区.html" class="wikilink">常见坑和误区</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../01-概念/核心概念速查.html" class="wikilink">核心概念速查</a></li>
+</ul>
+<h2>实践指南</h2>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../02-实践/如何开始学习.html" class="wikilink">如何开始学习</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../02-实践/最小练习清单.html" class="wikilink">最小练习清单</a>（整页过一遍即可，完成项在清单里勾）</li>
+</ul>
+<h2>官网导读（先打卡「必读」）</h2>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/索引.html" class="wikilink">官网索引（对照表）</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/01-Agents总览.html" class="wikilink">01-Agents总览</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/01-工具调用与Agent循环.html" class="wikilink">01-工具调用与Agent循环</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/01-Managed-Agents总览.html" class="wikilink">01-Managed-Agents总览</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/跨厂商/01-Agent-Skills对照.html" class="wikilink">01-Agent-Skills对照</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/跨厂商/02-MCP对照.html" class="wikilink">02-MCP对照</a></li>
+</ul>
+<h2>官网专题（选读，读一篇勾一篇）</h2>
+<ul>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/02-Managed-Agents.html" class="wikilink">02-Managed-Agents</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/04-Computer-Use.html" class="wikilink">04-Computer-Use</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/05-Agent-Skills.html" class="wikilink">05-Agent-Skills</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/06-MCP连接器.html" class="wikilink">06-MCP连接器</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/07-Server工具与Client工具.html" class="wikilink">07-Server工具与Client工具</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/08-Browser-Use.html" class="wikilink">08-Browser-Use</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/09-Managed-Agents工具与权限.html" class="wikilink">09-Managed-Agents工具与权限</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Anthropic-Claude/10-Memory-Tool.html" class="wikilink">10-Memory-Tool</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/02-Quickstart要点.html" class="wikilink">02-Quickstart要点</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/04-Managed与Custom-Agents.html" class="wikilink">04-Managed与Custom-Agents</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/05-Antigravity能力与工具.html" class="wikilink">05-Antigravity能力与工具</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/06-Interactions-API概述.html" class="wikilink">06-Interactions-API概述</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/07-Deep-Research-Agent.html" class="wikilink">07-Deep-Research-Agent</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/08-Building-Managed-Agents.html" class="wikilink">08-Building-Managed-Agents</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/09-Environments.html" class="wikilink">09-Environments</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/10-Hooks.html" class="wikilink">10-Hooks</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/Google-Gemini/11-Computer-Use.html" class="wikilink">11-Computer-Use</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/02-工具与函数调用-MCP.html" class="wikilink">02-工具与函数调用-MCP</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/03-Skills.html" class="wikilink">03-Skills</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/04-Agents-SDK-运行-Handoffs-Guardrails.html" class="wikilink">04-Agents-SDK-运行-Handoffs-Guardrails</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/05-Agents-API-架构简述.html" class="wikilink">05-Agents-API-架构简述</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/06-Programmatic-Tool-Calling.html" class="wikilink">06-Programmatic-Tool-Calling</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/07-Tool-Search.html" class="wikilink">07-Tool-Search</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="../03-资源/官网-Agent介绍/OpenAI/08-Agents-API-Environments与Security.html" class="wikilink">08-Agents-API-Environments与Security</a></li>
+</ul>
+    <footer class="footer">内容来自 Obsidian 库 · 由本地静态生成器构建</footer>
+  </div>
+</main>
+</div>
+<script>
+function toggleNav(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+</script>
+</body>
+</html>

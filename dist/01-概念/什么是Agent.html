@@ -1,1 +1,164 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是 Agent · Agent 学习站</title><link rel="stylesheet" href="../assets/style.css"></head><body><main><h1>什么是 Agent</h1><p>Agent = 目标 + 工具 + 根据反馈推进的循环。</p><p><a href="../index.html">返回首页</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>什么是 Agent · Agent 学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="overlay" id="overlay" onclick="toggleNav()"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="../index.html">Agent 学习站</a>
+    <span class="sub">Obsidian 笔记静态站</span>
+  </div>
+  <div class="nav-section"><div class="nav-section-title">入口</div>
+<a class="" href="../欢迎.html">欢迎</a>
+<a class="" href="../00-地图/学习驾驶舱.html">学习驾驶舱</a>
+<a class="" href="../00-地图/Agent学习地图.html">Agent学习地图</a>
+<a class="" href="../00-地图/阅读打卡.html">阅读打卡</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">01 概念</div>
+<a class="indent " href="Agent和聊天机器人有什么不同.html">Agent和聊天机器人有什么不同</a>
+<a class="indent " href="一次Agent任务长什么样.html">一次Agent任务长什么样</a>
+<a class="indent active" href="什么是Agent.html">什么是Agent</a>
+<a class="indent " href="常见坑和误区.html">常见坑和误区</a>
+<a class="indent " href="核心概念速查.html">核心概念速查</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">02 实践</div>
+<a class="indent " href="../02-实践/如何开始学习.html">如何开始学习</a>
+<a class="indent " href="../02-实践/最小练习清单.html">最小练习清单</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">03 资源</div>
+<a class="" href="../03-资源/延伸阅读.html">延伸阅读</a>
+<a class="" href="../03-资源/官网-Agent介绍/索引.html">官网索引</a>
+<a class="" href="../03-资源/官网-Agent介绍/收集进度.html">收集进度</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">OpenAI</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/01-Agents总览.html">01-Agents总览</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/02-工具与函数调用-MCP.html">02-工具与函数调用-MCP</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/03-Skills.html">03-Skills</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/04-Agents-SDK-运行-Handoffs-Guardrails.html">04-Agents-SDK-运行-Handoffs-Guardrails</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/05-Agents-API-架构简述.html">05-Agents-API-架构简述</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/06-Programmatic-Tool-Calling.html">06-Programmatic-Tool-Calling</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/07-Tool-Search.html">07-Tool-Search</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/08-Agents-API-Environments与Security.html">08-Agents-API-Environments与Security</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/OpenAI/99-延伸链接.html">99-延伸链接</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Anthropic</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/01-工具调用与Agent循环.html">01-工具调用与Agent循环</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/02-Managed-Agents.html">02-Managed-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/04-Computer-Use.html">04-Computer-Use</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/05-Agent-Skills.html">05-Agent-Skills</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/06-MCP连接器.html">06-MCP连接器</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/07-Server工具与Client工具.html">07-Server工具与Client工具</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/08-Browser-Use.html">08-Browser-Use</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/09-Managed-Agents工具与权限.html">09-Managed-Agents工具与权限</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Anthropic-Claude/10-Memory-Tool.html">10-Memory-Tool</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Google Gemini</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/01-Managed-Agents总览.html">01-Managed-Agents总览</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/02-Quickstart要点.html">02-Quickstart要点</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/04-Managed与Custom-Agents.html">04-Managed与Custom-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/05-Antigravity能力与工具.html">05-Antigravity能力与工具</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/06-Interactions-API概述.html">06-Interactions-API概述</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/07-Deep-Research-Agent.html">07-Deep-Research-Agent</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/08-Building-Managed-Agents.html">08-Building-Managed-Agents</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/09-Environments.html">09-Environments</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/10-Hooks.html">10-Hooks</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/Google-Gemini/11-Computer-Use.html">11-Computer-Use</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">跨厂商</div>
+<a class="indent " href="../03-资源/官网-Agent介绍/跨厂商/01-Agent-Skills对照.html">01-Agent-Skills对照</a>
+<a class="indent " href="../03-资源/官网-Agent介绍/跨厂商/02-MCP对照.html">02-MCP对照</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">日记</div>
+<a class="indent " href="../日记/2026-09-16-开库.html">2026-09-16-开库</a>
+<a class="indent " href="../日记/2026-09-16-驾驶舱上线.html">2026-09-16-驾驶舱上线</a>
+</div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-btn" type="button" onclick="toggleNav()">菜单</button>
+    <strong>Agent 学习站</strong>
+  </div>
+  <div class="content-wrap">
+    <div class="breadcrumb"><a href="../index.html">首页</a> <span>/</span> <a href="../01-概念.html">01-概念</a> <span>/</span> 什么是 Agent</div>
+    <h1>什么是 Agent</h1>
+
+<h2>直观理解</h2>
+<p>把「大模型」想成一个很会说、很会推理的大脑。<br>
+<strong>Agent</strong> 是在这颗大脑外面，再加三样东西：</p>
+<ol>
+<li><strong>目标</strong>：不是只回答一句，而是要完成一件事（例如：整理笔记、查资料、改文件）。</li>
+<li><strong>工具</strong>：能做事的手——读文件、搜网页、写 Obsidian、发邮件等。</li>
+<li><strong>循环</strong>：看现状 → 想下一步 → 用工具 → 看结果 → 再决定，直到完成或承认做不到。</li>
+</ol>
+<p>没有工具、也不会多步推进的，多半只是「聊天」；有目标、会用工具、会根据反馈改计划的，才更像 agent。</p>
+<h2>一个生活类比</h2>
+<p>你请助理：「帮我准备下周面试材料。」</p>
+<ul>
+<li>纯聊天：给你一段建议文字，结束。</li>
+<li>Agent：去文件夹找简历 → 搜岗位 JD → 对照缺口列提纲 → 写成笔记放进库里 → 问你缺的信息 → 再改一版。</li>
+</ul>
+<p>中间每一步都可能失败或偏航，agent 的价值在于<strong>能继续处理</strong>，而不是一次答完。</p>
+<h2>和几个容易混的词</h2>
+<table>
+<thead>
+<tr>
+<th>词</th>
+<th>大概是什么</th>
+<th>和 agent 的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM / 大模型</td>
+<td>文本推理引擎</td>
+<td>agent 的「脑」</td>
+</tr>
+<tr>
+<td>Chatbot</td>
+<td>对话界面</td>
+<td>可以包一层 agent，但本身不等于 agent</td>
+</tr>
+<tr>
+<td>Workflow / 流水线</td>
+<td>预先写死的步骤</td>
+<td>确定性高；agent 更灵活、也更不可控</td>
+</tr>
+<tr>
+<td>Tool / 插件 / Connector</td>
+<td>可调用的能力</td>
+<td>agent 的「手」</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>先检索再回答</td>
+<td>常被 agent 用作一种工具策略</td>
+</tr>
+</tbody>
+</table>
+<h2>你先需要掌握的程度</h2>
+<p>现阶段不必背论文定义。能用自己的话说明下面三点就够：</p>
+<ol>
+<li>Agent 有<strong>目标</strong>，不只是接话。</li>
+<li>Agent 会<strong>用工具</strong>改变外部世界（或至少读取外部信息）。</li>
+<li>Agent 会<strong>根据结果调整下一步</strong>。</li>
+</ol>
+    <footer class="footer">内容来自 Obsidian 库 · 由本地静态生成器构建</footer>
+  </div>
+</main>
+</div>
+<script>
+function toggleNav(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+</script>
+</body>
+</html>
