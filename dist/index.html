@@ -1,1 +1,112 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent 学习站</title><link rel="stylesheet" href="assets/style.css"></head><body><main><h1>Agent 学习站</h1><p>从 Obsidian 学习库生成的静态站点：驾驶舱、概念、实践与三家官网对照资料。</p><div class="cards"><a class="card" href="00-地图/学习驾驶舱.html"><h3>学习驾驶舱</h3><p>本库总控台与进度总览</p></a><a class="card" href="00-地图/Agent学习地图.html"><h3>Agent学习地图</h3><p>学习路线与阶段说明</p></a><a class="card" href="00-地图/阅读打卡.html"><h3>阅读打卡</h3><p>勾选驱动的阅读进度</p></a><a class="card" href="01-概念.html"><h3>概念</h3><p>心智模型与核心概念</p></a><a class="card" href="02-实践.html"><h3>实践</h3><p>如何开始与最小练习</p></a><a class="card" href="03-资源/官网-Agent介绍/索引.html"><h3>官网索引</h3><p>三家官方资料对照入口</p></a><a class="card" href="03-资源/官网-Agent介绍/跨厂商.html"><h3>跨厂商</h3><p>Skills / MCP 等跨厂商对照</p></a></div><p><a href="欢迎.html">欢迎页 →</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 学习站 · Agent 学习站</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="overlay" id="overlay" onclick="toggleNav()"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">Agent 学习站</a>
+    <span class="sub">Obsidian 笔记静态站</span>
+  </div>
+  <div class="nav-section"><div class="nav-section-title">入口</div>
+<a class="" href="欢迎.html">欢迎</a>
+<a class="" href="00-地图/学习驾驶舱.html">学习驾驶舱</a>
+<a class="" href="00-地图/Agent学习地图.html">Agent学习地图</a>
+<a class="" href="00-地图/阅读打卡.html">阅读打卡</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">01 概念</div>
+<a class="indent " href="01-概念/Agent和聊天机器人有什么不同.html">Agent和聊天机器人有什么不同</a>
+<a class="indent " href="01-概念/一次Agent任务长什么样.html">一次Agent任务长什么样</a>
+<a class="indent " href="01-概念/什么是Agent.html">什么是Agent</a>
+<a class="indent " href="01-概念/常见坑和误区.html">常见坑和误区</a>
+<a class="indent " href="01-概念/核心概念速查.html">核心概念速查</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">02 实践</div>
+<a class="indent " href="02-实践/如何开始学习.html">如何开始学习</a>
+<a class="indent " href="02-实践/最小练习清单.html">最小练习清单</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">03 资源</div>
+<a class="" href="03-资源/延伸阅读.html">延伸阅读</a>
+<a class="" href="03-资源/官网-Agent介绍/索引.html">官网索引</a>
+<a class="" href="03-资源/官网-Agent介绍/收集进度.html">收集进度</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">OpenAI</div>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/01-Agents总览.html">01-Agents总览</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/02-工具与函数调用-MCP.html">02-工具与函数调用-MCP</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/03-Skills.html">03-Skills</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/04-Agents-SDK-运行-Handoffs-Guardrails.html">04-Agents-SDK-运行-Handoffs-Guardrails</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/05-Agents-API-架构简述.html">05-Agents-API-架构简述</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/06-Programmatic-Tool-Calling.html">06-Programmatic-Tool-Calling</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/07-Tool-Search.html">07-Tool-Search</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/08-Agents-API-Environments与Security.html">08-Agents-API-Environments与Security</a>
+<a class="indent " href="03-资源/官网-Agent介绍/OpenAI/99-延伸链接.html">99-延伸链接</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Anthropic</div>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/01-工具调用与Agent循环.html">01-工具调用与Agent循环</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/02-Managed-Agents.html">02-Managed-Agents</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/04-Computer-Use.html">04-Computer-Use</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/05-Agent-Skills.html">05-Agent-Skills</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/06-MCP连接器.html">06-MCP连接器</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/07-Server工具与Client工具.html">07-Server工具与Client工具</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/08-Browser-Use.html">08-Browser-Use</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/09-Managed-Agents工具与权限.html">09-Managed-Agents工具与权限</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Anthropic-Claude/10-Memory-Tool.html">10-Memory-Tool</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">Google Gemini</div>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/01-Managed-Agents总览.html">01-Managed-Agents总览</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/02-Quickstart要点.html">02-Quickstart要点</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/03-延伸链接.html">03-延伸链接</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/04-Managed与Custom-Agents.html">04-Managed与Custom-Agents</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/05-Antigravity能力与工具.html">05-Antigravity能力与工具</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/06-Interactions-API概述.html">06-Interactions-API概述</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/07-Deep-Research-Agent.html">07-Deep-Research-Agent</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/08-Building-Managed-Agents.html">08-Building-Managed-Agents</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/09-Environments.html">09-Environments</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/10-Hooks.html">10-Hooks</a>
+<a class="indent " href="03-资源/官网-Agent介绍/Google-Gemini/11-Computer-Use.html">11-Computer-Use</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">跨厂商</div>
+<a class="indent " href="03-资源/官网-Agent介绍/跨厂商/01-Agent-Skills对照.html">01-Agent-Skills对照</a>
+<a class="indent " href="03-资源/官网-Agent介绍/跨厂商/02-MCP对照.html">02-MCP对照</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">日记</div>
+<a class="indent " href="日记/2026-09-16-开库.html">2026-09-16-开库</a>
+<a class="indent " href="日记/2026-09-16-驾驶舱上线.html">2026-09-16-驾驶舱上线</a>
+</div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <button class="menu-btn" type="button" onclick="toggleNav()">菜单</button>
+    <strong>Agent 学习站</strong>
+  </div>
+  <div class="content-wrap wide">
+    
+    
+<div class="hero">
+  <h1>Agent 学习站</h1>
+  <p>从 Obsidian 学习库生成的静态站点：驾驶舱、概念、实践与三家官网对照资料。</p>
+</div>
+<div class="cards">
+<a class="card" href="00-地图/学习驾驶舱.html"><div class="icon">🛫</div><h3>学习驾驶舱</h3><p>本库总控台与进度总览</p></a><a class="card" href="00-地图/Agent学习地图.html"><div class="icon">🗺️</div><h3>Agent学习地图</h3><p>学习路线与阶段说明</p></a><a class="card" href="00-地图/阅读打卡.html"><div class="icon">✅</div><h3>阅读打卡</h3><p>勾选驱动的阅读进度</p></a><a class="card" href="01-概念.html"><div class="icon">💡</div><h3>概念</h3><p>心智模型与核心概念</p></a><a class="card" href="02-实践.html"><div class="icon">🛠️</div><h3>实践</h3><p>如何开始与最小练习</p></a><a class="card" href="03-资源/官网-Agent介绍/索引.html"><div class="icon">📚</div><h3>官网索引</h3><p>三家官方资料对照入口</p></a><a class="card" href="03-资源/官网-Agent介绍/跨厂商.html"><div class="icon">🔗</div><h3>跨厂商</h3><p>Skills / MCP 等跨厂商对照</p></a>
+</div>
+<p><a href="欢迎.html">欢迎页 →</a></p>
+
+    <footer class="footer">内容来自 Obsidian 库 · 由本地静态生成器构建</footer>
+  </div>
+</main>
+</div>
+<script>
+function toggleNav(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+</script>
+</body>
+</html>
